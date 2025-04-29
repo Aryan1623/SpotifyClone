@@ -1,0 +1,89 @@
+/* Apply to the entire viewport */
+.signupmain {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Center the sign-up container on the screen */
+.signup-container {
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for the heading */
+.signup-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Style input fields */
+.signup-container input[type="text"],
+.signup-container input[type="email"],
+.signup-container input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Style for submit button */
+.signup-container input[type="submit"] {
+  background-color: #1db954;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.signup-container input[type="submit"]:hover {
+  background-color: #1ed760;
+}
+
+/* Style for paragraphs */
+.signup-container p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Style for the logo */
+.logo img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Style for anchor links */
+.signup-container a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}

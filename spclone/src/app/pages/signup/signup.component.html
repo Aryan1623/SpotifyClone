@@ -1,0 +1,56 @@
+<div class="signupmain">
+  <div class="signup-container">
+    <div class="logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo">
+    </div>
+    <h2>Sign Up for Spotify</h2>
+    <form (ngSubmit)="signUp()">
+      <input
+        type="text"
+        [(ngModel)]="fullName"
+        placeholder="Full Name"
+        required
+        name="fullName"
+      >
+      <input
+        type="email"
+        [(ngModel)]="email"
+        placeholder="Email"
+        required
+        name="email"
+      >
+      <input
+        type="text"
+        [(ngModel)]="mobileNo"
+        placeholder="Mobile no"
+        required
+        name="mobileNo"
+      >
+      <input
+        type="password"
+        [(ngModel)]="password"
+        (input)="validatePasswords()"
+        placeholder="Password"
+        required
+        name="password"
+      >
+      <input
+        type="password"
+        [(ngModel)]="confirmPassword"
+        (input)="validatePasswords()"
+        placeholder="Confirm Password"
+        required
+        name="confirmPassword"
+      >
+      <div class="error-message" *ngIf="!passwordsMatch && confirmPassword">
+        Passwords do not match
+      </div>
+      <input
+        type="submit"
+        value="Sign Up"
+        [disabled]="!passwordsMatch"
+      >
+    </form>
+    <p>Already have an account? <a routerLink="/login">Log in</a></p>
+  </div>
+</div>

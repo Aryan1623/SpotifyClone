@@ -1,0 +1,107 @@
+/* login.component.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+}
+
+.spotify-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.login-container {
+  background-color: #282828;
+  border-radius: 8px;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo img {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.login-button {
+  background-color: #1db954;
+  color: black;
+  border: none;
+  padding: 15px;
+  border-radius: 25px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-login {
+  background-color: white;
+  color: #333;
+}
+
+.google-login img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.input-field {
+  width: calc(100% - 20px);
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: none;
+  font-size: 14px;
+}
+
+.input-field:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.extra-options {
+  margin-top: 20px;
+}
+
+.extra-options a {
+  color: #1db954;
+  text-decoration: none;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    padding: 30px;
+  }
+
+  .login-button {
+    padding: 12px;
+  }
+
+  .input-field {
+    padding: 12px;
+  }
+}

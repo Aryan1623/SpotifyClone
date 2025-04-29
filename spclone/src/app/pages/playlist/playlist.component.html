@@ -1,0 +1,90 @@
+<div class="spotify-home">
+  <header class="header">
+    <div class="logo">
+
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"
+        alt="Spotify Logo"
+        (click) = "viewHome()"
+      />
+
+    </div>
+    <div class="user-icon" (click)="toggleDropdown()">
+      <!-- Display the first letter of the username -->
+      <span class="user-initial">{{ username.charAt(0).toUpperCase() }}</span>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdown-menu" *ngIf="isDropdownOpen">
+      <ul>
+        <li (click)="viewFavorites()">My Favorites</li>
+        <li (click)="viewPlaylist()">My Playlist</li>
+        <li (click)="logout()">Logout</li>
+      </ul>
+    </div>
+  </header>
+
+  <aside class="left-navbar">
+    <nav>
+      <ul>
+        <li (click)="viewFavorites()">My Favorites</li>
+        <li (click)="viewPlaylist()">My Playlist</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="hero-section">
+    <h1>Playlist</h1>
+    <div class="trending-songs">
+      <div class="song-card" *ngFor="let favorite of favoriteSongs">
+        <img [src]="favorite.song.image" alt="Song Image" class="song-image" />
+        <div class="song-details">
+          <p class="song-name">{{ favorite.song.name }}</p>
+          <p class="artist-name">{{ favorite.song.artist }}</p>
+        </div>
+        <button class="play-button" (click)="playSong(favorite.song)">Play</button>
+        <button class="top-right-buttons add-button" (click)="deleteSong(favorite.id)">
+          <img src="../../../assets/images/delete.png" alt="">
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Playbar -->
+    <div class="playbar" *ngIf="currentSong">
+      <!-- Timeline above the controls -->
+      <input
+        type="range"
+        min="0"
+        [max]="duration"
+        [(ngModel)]="currentTime"
+        (input)="seek($event)"
+        class="timeline"
+      />
+      <!-- Play controls -->
+      <div class="controls">
+        <button (click)="skip(-10)" class="control-button">⏪ 10s</button>
+        <button (click)="togglePlay()" class="play-pause-button">
+          <ng-container *ngIf="isPlaying; else playIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
+            </svg>
+          </ng-container>
+          <ng-template #playIcon>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7L8 5z" />
+            </svg>
+          </ng-template>
+        </button>
+        <button (click)="skip(10)" class="control-button">10s ⏩</button>
+      </div>
+      <!-- Display current time and duration -->
+      <div class="time-info">
+        <span>{{ formatTime(currentTime) }} / {{ formatTime(duration) }}</span>
+      </div>
+    </div>
+
+    <audio #audioPlayer controls style="display: none;" (timeupdate)="updateTime()"></audio>
+  </main>
+</div>

@@ -1,0 +1,36 @@
+<div class="spotify-login">
+  <div class="login-container">
+    <div class="logo">
+      <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png" alt="Spotify Logo">
+    </div>
+    <h2>Login to Spotify</h2>
+    <button class="login-button google-login" (click)="showAlert()">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.AfKMLf4rKX7EqOSAVpujIQHaEK&pid=Api&P=0&h=180" alt="Google Logo">
+      Continue with Google
+    </button>
+    <p>or</p>
+    <form (ngSubmit)="login()">
+      <input
+        type="text"
+        placeholder="Email address"
+        class="input-field"
+        [(ngModel)]="email"
+        name="email"
+        required
+      >
+      <input
+        type="password"
+        placeholder="Password"
+        class="input-field"
+        [(ngModel)]="password"
+        name="password"
+        required
+      >
+      <button type="submit" class="login-button">Log In</button>
+    </form>
+    <div class="extra-options">
+      <a href="#">Forgot your password?</a>
+      <p>Don't have an account? <a href="signup">Sign up for Spotify</a></p>
+    </div>
+  </div>
+</div>

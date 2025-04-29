@@ -1,0 +1,173 @@
+/* Basic CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+/* home.component.css */
+.spotify-home {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000; /* Spotify's navbar color */
+  border-bottom: 1px solid #282828;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.login-button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #1db954; /* Spotify's green color */
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.hero-section {
+  flex: 1;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 20px;
+}
+
+/* Scrollbar styling for Spotify-like theme */
+.hero-section::-webkit-scrollbar {
+  width: 12px;
+}
+
+.hero-section::-webkit-scrollbar-track {
+  background: #121212;
+}
+.hero-section::-webkit-scrollbar-thumb {
+  background-color: #1db954; /* Spotify green */
+  border-radius: 10px;
+  border: 3px solid #121212;
+}
+
+
+.trending-songs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.song-card {
+  background-color: #181818;
+  border-radius: 5px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  position: relative; /* For play button positioning */
+}
+
+.song-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.song-details {
+  margin-top: 10px;
+}
+
+/* Play Button - Hidden by Default */
+.play-button {
+  background-color: #1db954;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show Play Button on Card Hover */
+.song-card:hover .play-button {
+  opacity: 1;
+}
+
+/* Playbar styling to fix it at the bottom */
+.playbar {
+  position: fixed;
+  bottom: 0; /* Stick to the bottom of the viewport */
+  left: 0;
+  right: 0;
+  background-color: #282828; /* Spotify-like dark gray */
+  color: #fff;
+  padding: 5px 10px; /* Reduced padding for a shorter height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #121212;
+  z-index: 20; /* Make sure it stays above other elements */
+}
+
+/* Timeline remains above the controls */
+.timeline {
+  width: 80%;
+  margin-bottom: 5px; /* Adjusted margin */
+}
+
+/* Control buttons styling */
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Reduced gap */
+}
+
+.control-button {
+  background: none;
+  border: none;
+  color: #1db954;
+  font-size: 18px; /* Slightly smaller font size */
+  cursor: pointer;
+}
+
+/* Play/Pause button styling */
+.play-pause-button {
+  border: none;
+  color: black;
+  width: 40px;
+  background-color: #1db954;
+  border-radius: 50%;
+  font-size: 32px; /* Larger size for play/pause icons */
+  cursor: pointer;
+}
+
+/* Time information styling */
+.time-info {
+  margin-top: 3px; /* Reduced margin */
+  font-size: 10px; /* Smaller font size */
+}
+
+/* Remove the footer as playbar replaces it */
+.footer {
+  display: none;
+}

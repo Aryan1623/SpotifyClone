@@ -1,0 +1,82 @@
+{
+  "posts": [
+    {
+      "id": "19zjikaf",
+      "userId": "2d10",
+      "song": {
+        "name": "Aaj ki Raat",
+        "artist": "Sachin-Jigar",
+        "image": "https://images.ottplay.com/images/big/stree-2-new-poster-1721216275.jpeg",
+        "audio": "assets/audio/Aaj Ki Raat-(SambalpuriStar.In).mp3"
+      }
+    },
+    {
+      "id": "uinbwj8t",
+      "userId": "2d10",
+      "song": {
+        "name": "Aayi Nahi",
+        "artist": "Sachin-Jigar",
+        "image": "https://i.ytimg.com/vi/K3CL3Rb4_E0/maxresdefault.jpg",
+        "audio": "assets/audio/Aayi Nahi_128-(DJMaza).mp3"
+      }
+    },
+    {
+      "id": "xfhi0jxg",
+      "userId": "7d81",
+      "song": {
+        "name": "Aaj ki Raat",
+        "artist": "Sachin-Jigar",
+        "image": "https://images.ottplay.com/images/big/stree-2-new-poster-1721216275.jpeg",
+        "audio": "assets/audio/Aaj Ki Raat-(SambalpuriStar.In).mp3"
+      }
+    }
+  ],
+  "Users": [
+    {
+      "id": "7d81",
+      "fullName": "Aryan Madhukar Wattamwar",
+      "email": "aryanm31124@gmail.com",
+      "mobileNo": "7760239210",
+      "password": "ayush@123"
+    },
+    {
+      "id": "2d10",
+      "fullName": "ayush",
+      "email": "aryanm3124@gmail.com",
+      "mobileNo": "7760239210",
+      "password": "ayush@123"
+    }
+  ],
+  "profile": [
+    {
+      "id": "deyffaqf",
+      "userId": "2d10",
+      "song": {
+        "name": "Aaj ki Raat",
+        "artist": "Sachin-Jigar",
+        "image": "https://images.ottplay.com/images/big/stree-2-new-poster-1721216275.jpeg",
+        "audio": "assets/audio/Aaj Ki Raat-(SambalpuriStar.In).mp3"
+      }
+    },
+    {
+      "id": "6r947ywn",
+      "userId": "7d81",
+      "song": {
+        "name": "Aayi Nahi",
+        "artist": "Sachin-Jigar",
+        "image": "https://i.ytimg.com/vi/K3CL3Rb4_E0/maxresdefault.jpg",
+        "audio": "assets/audio/Aayi Nahi_128-(DJMaza).mp3"
+      }
+    },
+    {
+      "id": "k3w71g1y",
+      "userId": "7d81",
+      "song": {
+        "name": "Aaj ki Raat",
+        "artist": "Sachin-Jigar",
+        "image": "https://images.ottplay.com/images/big/stree-2-new-poster-1721216275.jpeg",
+        "audio": "assets/audio/Aaj Ki Raat-(SambalpuriStar.In).mp3"
+      }
+    }
+  ]
+}
